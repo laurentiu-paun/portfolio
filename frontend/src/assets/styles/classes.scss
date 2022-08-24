@@ -1,0 +1,23 @@
+.placeholder {
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(57, 20, 0, 0.64);
+}
+
+.lightInputDefault {
+  font-family: 'Epilogue';
+  label {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+  input {
+    background: #000;
+    border: 1px solid #F3D1BF;
+    border-radius: 6px;
+    &::placeholder {
+      @extend .placeholder;
+    }
+  }
+}
