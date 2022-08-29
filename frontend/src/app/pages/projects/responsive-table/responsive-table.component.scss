@@ -1,0 +1,124 @@
+//TEMA
+//6 coloane (poza, nume, functie, salariu, societate, data angajare)
+//media query pentru 1000px si pentru 800px
+//tabelul va avea 6 intrari
+// veti folosi minim 4 culori, toate VARIABILE
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;600&display=swap');
+@import "../../../../assets/styles/variables";
+
+@mixin media-1000 {
+  @media(min-width: 800px) and (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin media-800 {
+  @media(max-width: 800px) {
+    @content;
+  }
+}
+@mixin media-800-up {
+  @media(min-width: 800px) {
+    @content;
+  }
+}
+@mixin hide-800-down {
+  @include media-800 {
+    display: none;
+  }
+}
+
+.table {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  max-width: 100%;
+  margin: 0 18px;
+  text-align: center;
+  @include media-800 {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  &-row {
+    display: flex;
+    align-items: center;
+    &:nth-child(odd) {
+      background: rgba($col-brown, 0.3);
+      @include media-1000 {
+        background: rgba($col-brown, 0.1);
+      }
+    }
+    &:nth-child(even) {
+      background: $col-white;
+    }
+    &.header {
+      background: $col-black;
+      color: $col-white;
+      font-weight: 600;
+      @include media-1000 {
+        background: $col-brown;
+      }
+      @include hide-800-down;
+    }
+    &:hover {
+      background: rgba($col-orange, 0.2);
+      cursor: pointer;
+    }
+    @include media-1000 {
+      border-bottom: 2px solid $col-beige-border;
+    }
+    @include media-800 {
+      flex-direction: column;
+      padding: 10px 0;
+    }
+    .cell {
+      padding: 10px;
+      &.poza {
+        width: 80px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 8px;
+        }
+        @include media-800 {
+          width: 100px;
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+      @include media-800-up {
+        &.nume {
+          width: 100px;
+          text-align: left;
+        }
+        &.functie {
+          flex: 1;
+          text-align: center;
+        }
+        &.salariu {
+          width: 70px;
+          text-align: right;
+        }
+        &.societate {
+          width: 80px;
+          text-align: center;
+        }
+        &.dataAngajare {
+          width: 90px;
+          text-align: right;
+        }
+      }
+      @include media-800 {
+        width: 100%;
+        padding: 2px;
+        &:before {
+          content: attr(header-atr);
+          width: 50%;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

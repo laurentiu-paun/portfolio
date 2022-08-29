@@ -1,7 +1,7 @@
 @import "variables";
 
 //abstract
-.resetInputStyles {
+%resetInputStyles {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -14,14 +14,14 @@
   cursor: inherit;
   line-height: inherit;
 }
-.inputStyles {
+%inputStyles {
   background: $col-white;
   border-radius: 6px;
 }
-.selectStylesWrapped {
+%selectStylesWrapped {
   .select {
     select {
-      @extend .resetInputStyles;
+      @extend %resetInputStyles;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -30,7 +30,7 @@
       z-index: 1;
       outline: none;
     }
-    @extend .inputStyles;
+    @extend %inputStyles;
     display: flex;
     align-items: center;
     width: 100%;
@@ -56,7 +56,7 @@
 
 .light {
   background: $col-light-beige;
-  color: $col-dark-gray;
+  color: $col-brown;
 }
 
 .textBig {
@@ -78,10 +78,10 @@
     margin-bottom: 16px;
   }
   input {
-    @extend .resetInputStyles;
-    @extend .inputStyles;
+    @extend %resetInputStyles;
+    @extend %inputStyles;
   }
-  @extend .selectStylesWrapped;
+  @extend %selectStylesWrapped;
 }
 .fieldLight {
   @extend .field;
@@ -89,4 +89,3 @@
     border: 1px solid $col-beige-border;
   }
 }
-

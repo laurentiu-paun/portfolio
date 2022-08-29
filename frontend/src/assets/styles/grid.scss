@@ -55,7 +55,7 @@ $map-grid-props: (
       display: none !important;
     }
   }
-  @include create-mq($breakpoint + 1, "min") {
+  @include create-mq($breakpoint, "min") {
     .hidden#{$modifier}-up {
       display: none !important;
     }
