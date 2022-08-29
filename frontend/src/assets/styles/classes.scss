@@ -47,6 +47,10 @@
     }
   }
 }
+%projectTitleStyles{
+  text-align: center;
+  margin: 18px auto;
+}
 
 //classes to use
 .dark {
@@ -68,7 +72,7 @@
   font-size: 14px;
   line-height: 24px;
 }
-.field {
+.fieldDark {
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -84,7 +88,7 @@
   @extend %selectStylesWrapped;
 }
 .fieldLight {
-  @extend .field;
+  @extend .fieldDark;
   input, select {
     border: 1px solid $col-beige-border;
   }

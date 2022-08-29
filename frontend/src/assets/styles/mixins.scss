@@ -1,0 +1,6 @@
+@import "variables";
+@mixin onMobile {
+  @media(max-width: $grid__bp-sm) {
+    @content;
+  }
+}

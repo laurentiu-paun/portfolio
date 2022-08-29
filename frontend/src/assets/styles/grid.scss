@@ -1,8 +1,4 @@
-$grid__cols: 12;
-$grid__bp-sm: 576px;
-$grid__bp-md: 768px;
-$grid__default: $grid__bp-md + 1px;
-$page-width: 1440px;
+@import "variables";
 $map-grid-props: (
   $grid__default: "",
   $grid__bp-md: "-md",

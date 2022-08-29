@@ -5,7 +5,7 @@
 // veti folosi minim 4 culori, toate VARIABILE
 
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;600&display=swap');
-@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/classes";
 
 @mixin media-1000 {
   @media(min-width: 800px) and (max-width: 1000px) {
@@ -26,6 +26,10 @@
   @include media-800 {
     display: none;
   }
+}
+
+h4 {
+  @extend %projectTitleStyles;
 }
 
 .table {
