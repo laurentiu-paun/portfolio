@@ -7,6 +7,7 @@ import {WorkComponent} from "./pages/work/work.component";
 import {ResponsiveTableComponent} from "./pages/projects/responsive-table/responsive-table.component";
 import {ColorPaletteComponent} from "./pages/projects/color-palette/color-palette.component"
 import {NgModule} from "@angular/core";
+import {CarsStatusComponent} from "./pages/projects/cars-status/cars-status.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, title: "Frontend - Home"},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'work', component: WorkComponent, title: "Frontend - Proiecte"},
   {path: 'ResponsiveTable', component: ResponsiveTableComponent, title: "Proiecte - Tabel Responsive"},
   {path: 'ColorPalette', component: ColorPaletteComponent, title: "Proiecte - Paleta de culori"},
+  {path: 'CarsStatus', component: CarsStatusComponent, title: "Proiecte - Status masini"},
   { path: '**', redirectTo: 'home' ,title: "Frontend"}
 ]
 
@@ -27,4 +29,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
-export const routingComponents = [HomeComponent, AboutComponent, ContactComponent, CvComponent, WorkComponent, ResponsiveTableComponent, ColorPaletteComponent]
+export const routingComponents = [HomeComponent, AboutComponent, ContactComponent, CvComponent, WorkComponent, ResponsiveTableComponent, ColorPaletteComponent, CarsStatusComponent]

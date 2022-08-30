@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import "../../../../assets/styles/variables";
+$col-dark-grey: #5B5C60;
+$col-light-grey: #ECECEC;
+$col-white-grey: #EEF0F3;
+$col-blue: #005AFE;
+$col-purple: #4C3FB1;
+$col-yellow: #FFCB45;
+$col-green: #7FBA02;
+$col-azure: #38CCF6;
+$col-red: #D22630;
+
+.row {
+  justify-content: center;
+}
+
+.container-status {
+  width: 600px;
+  max-width: 600px;
+  margin: 123px 0;
+  background: $col-white;
+  border: 1px solid $col-light-grey;
+  border-radius: 8px;
+  color: $col-dark-grey;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0 40px 24px;
+  .breadcrumbs{
+    display: flex;
+    margin-bottom: 6px;
+    span {
+      font-size: 12px;
+      line-height: 150%;
+      &:hover {
+        color: blue;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      &:before {
+        content: "/";
+        color: $col-dark-grey;
+        font-weight: normal;
+        margin: 0 4px;
+      }
+      &:first-child {
+        color: $col-blue;
+        &:before {
+          content: "";
+          margin: 0;
+        }
+      }
+    }
+  }
+  .title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+  }
+  .carsTotal {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $col-blue;
+  }
+}
+
+.table{
+  margin: 0 24px 24px;
+  &-row {
+    display: flex;
+    align-items: center;
+    border: 1px solid $col-light-grey;
+    border-radius: 8px;
+    padding: 12px 24px 12px 16px;
+    margin-bottom: 6px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.tHeader {
+      border: none;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 150%;
+    }
+    .nr, .header1, .header2, .status {
+      width: 52px;
+      padding-right: 50px;
+    }
+    .nr {
+      width: 30px;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 150%;
+        color: $col-white;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+      }
+    }
+    span {
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .header1 {
+      display: flex;
+      flex-direction: column;
+      strong {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 150%;
+        color: $col-red;
+      }
+    }
+    .header2 {
+      text-align: right;
+    }
+    .header3 {
+      flex: 1 0 auto;
+    }
+    .status {
+      padding-right: 0;
+      .progress {
+        width: 48px;
+        height: 7px;
+        background: $col-white-grey;
+        border-radius: 8px;
+        .bar {
+          width: 24%;
+          height: 100%;
+          background: $col-red;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+.purple {
+  background: $col-purple !important;
+}
+.yellow {
+  background: $col-yellow !important;
+}
+.green {
+  background: $col-green !important;
+}
+.azure {
+  background: $col-azure !important;
+}
