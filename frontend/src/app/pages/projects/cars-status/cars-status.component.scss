@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
-@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/classes";
 $col-dark-grey: #5B5C60;
 $col-light-grey: #ECECEC;
 $col-white-grey: #EEF0F3;
@@ -10,12 +10,17 @@ $col-green: #7FBA02;
 $col-azure: #38CCF6;
 $col-red: #D22630;
 
+h3 {
+  @extend %projectTitleStyles;
+}
+
 .row {
   justify-content: center;
 }
 
 .container-status {
   width: 600px;
+  max-width: 600px;
   max-width: 600px;
   margin: 123px 0;
   background: $col-white;
@@ -125,6 +130,7 @@ $col-red: #D22630;
     }
     .header3 {
       flex: 1 0 auto;
+      padding-right: 50px;
     }
     .status {
       padding-right: 0;
