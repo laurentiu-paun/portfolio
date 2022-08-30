@@ -4,3 +4,8 @@
     @content;
   }
 }
+@mixin hideOnMobile {
+  @include onMobile {
+    display: none;
+  }
+}
