@@ -44,29 +44,17 @@
     bottom: -35px;
     @include hideOnMobile;
   }
+
+  @include onMobile {
+    margin-bottom: 50px;
+    padding: 0 10px;
+    text-align: center;
+  }
 }
 
 .info {
   box-sizing: border-box;
   padding: 0 100px;
-
-  .tel:before {
-    content: '\f098';
-    font-family: "fontello";
-  }
-  .e-mail:before {
-    content: '\f0e0';
-    font-family: "fontello";
-  }
-  .address:before {
-    content: '\e800';
-    font-family: "fontello";
-    padding-right: 6px;
-  }
-  .website:before {
-    content: '\e801';
-    font-family: "fontello";
-  }
 
   h2, h3, h4 {
     padding-bottom: 20px;
@@ -79,6 +67,23 @@
   .contact {
     @extend %flexColumn;
     gap: 10px;
+    .tel:before {
+      content: '\f098';
+      font-family: "fontello";
+    }
+    .e-mail:before {
+      content: '\f0e0';
+      font-family: "fontello";
+    }
+    .address:before {
+      content: '\e800';
+      font-family: "fontello";
+      padding-right: 6px;
+    }
+    .website:before {
+      content: '\e801';
+      font-family: "fontello";
+    }
   }
 
   ul {
@@ -100,6 +105,24 @@
     gap: 20px;
     .company-details {
       margin-top: 15px;
+    }
+  }
+
+  @include onMobile {
+    padding: 0 10px;
+    flex-direction: column;
+    .contact {
+      text-align: center;
+    }
+    .border-bottom, .right-side {
+      border: none;
+    }
+    h2, h3, h4, h5 {
+      text-align: center;
+    }
+    * {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
