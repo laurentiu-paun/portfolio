@@ -1,0 +1,96 @@
+@import "../../../assets/styles/classes";
+@import "../../../assets/styles/mixins";
+
+.container {
+  border-radius: 10px;
+  background: $col-white;
+  box-shadow: 20px 20px 50px $col-dark-blue;
+  padding-bottom: 50px;
+}
+
+.row * {
+  box-sizing: border-box;
+}
+
+.header {
+  margin: 50px 0 100px;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  position: relative;
+
+  .title > h2 {
+    margin-bottom: 8px;
+  }
+
+  img {
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    right: 100px;
+    bottom: -35px;
+    @include hideOnMobile;
+  }
+}
+
+.info {
+  box-sizing: border-box;
+  padding: 0 100px;
+
+  h2, h3, h4 {
+    padding-bottom: 20px;
+  }
+
+  .h5small {
+    letter-spacing: 6px;
+  }
+
+  .contact {
+    @extend %flexColumn;
+    gap: 10px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 15px;
+  }
+
+  .details {
+    @extend %flexColumn;
+    margin-bottom: 30px;
+  }
+
+  .company-details {
+    margin-top: 15px;
+  }
+}
+
+h2, h3, h4, h5 {
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin-bottom: 10px;
+}
+
+.border-bottom {
+  //flex: 1 1 0;
+  border-bottom: 1px solid $col-dark-blue;
+}
+
+.left-side {
+  padding: 20px 0;
+}
+
+.right-side {
+  border-left: 1px solid $col-dark-blue;
+  padding: 20px 0 20px 20px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+
