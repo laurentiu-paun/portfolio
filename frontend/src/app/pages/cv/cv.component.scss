@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../../../assets/fonts/font/fontello.eot?36642810');
+  src: url('../../../assets/fonts/font/fontello.eot?36642810#iefix') format('embedded-opentype'),
+  url('../../../assets/fonts/font/fontello.woff2?36642810') format('woff2'),
+  url('../../../assets/fonts/font/fontello.woff?36642810') format('woff'),
+  url('../../../assets/fonts/font/fontello.ttf?36642810') format('truetype'),
+  url('../../../assets/fonts/font/fontello.svg?36642810#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "../../../assets/styles/classes";
 @import "../../../assets/styles/mixins";
 
@@ -38,6 +50,24 @@
   box-sizing: border-box;
   padding: 0 100px;
 
+  .tel:before {
+    content: '\f098';
+    font-family: "fontello";
+  }
+  .e-mail:before {
+    content: '\f0e0';
+    font-family: "fontello";
+  }
+  .address:before {
+    content: '\e800';
+    font-family: "fontello";
+    padding-right: 6px;
+  }
+  .website:before {
+    content: '\e801';
+    font-family: "fontello";
+  }
+
   h2, h3, h4 {
     padding-bottom: 20px;
   }
@@ -61,8 +91,11 @@
     margin-bottom: 30px;
   }
 
-  .company-details {
-    margin-top: 15px;
+  .experience {
+    margin-top: 40px;
+    .company-details {
+      margin-top: 15px;
+    }
   }
 }
 
