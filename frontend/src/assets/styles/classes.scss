@@ -49,7 +49,11 @@
 }
 %projectTitleStyles{
   text-align: center;
-  margin: 18px auto;
+  margin: 50px auto;
+}
+%flexColumn {
+  display: flex;
+  flex-direction: column;
 }
 
 //classes to use

@@ -15,11 +15,11 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent, title: "Frontend - Despre mine"},
   {path: 'contact', component: ContactComponent, title: "Frontend - Contact"},
   {path: 'cv', component: CvComponent, title: "Frontend - CV"},
-  {path: 'work', component: WorkComponent, title: "Frontend - Proiecte"},
-  {path: 'ResponsiveTable', component: ResponsiveTableComponent, title: "Proiecte - Tabel Responsive"},
-  {path: 'ColorPalette', component: ColorPaletteComponent, title: "Proiecte - Paleta de culori"},
-  {path: 'CarsStatus', component: CarsStatusComponent, title: "Proiecte - Status masini"},
-  {path: 'JobApplication', component: JobApplicationComponent, title: "Proiecte - Oferta de angajare"},
+  {path: 'work', component: WorkComponent, title: "Frontend - Proiectele mele"},
+  {path: 'ResponsiveTable', component: ResponsiveTableComponent, title: "Proiectele mele - Tabel Responsive"},
+  {path: 'ColorPalette', component: ColorPaletteComponent, title: "Proiectele mele - Paleta de culori"},
+  {path: 'CarsStatus', component: CarsStatusComponent, title: "Proiectele mele - Status masini"},
+  {path: 'JobApplication', component: JobApplicationComponent, title: "Proiectele mele - Oferta de angajare"},
   { path: '**', redirectTo: 'home' ,title: "Frontend"}
 ]
 

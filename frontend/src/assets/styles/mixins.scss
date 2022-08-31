@@ -9,3 +9,8 @@
     display: none;
   }
 }
+@mixin onTablet {
+  @media(max-width: $grid__bp-md) {
+    @content;
+  }
+}
