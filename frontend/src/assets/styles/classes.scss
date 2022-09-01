@@ -14,10 +14,12 @@
   cursor: inherit;
   line-height: inherit;
 }
+
 %inputStyles {
   background: $col-white;
   border-radius: 6px;
 }
+
 %selectStylesWrapped {
   .select {
     select {
@@ -30,12 +32,14 @@
       z-index: 1;
       outline: none;
     }
+
     @extend %inputStyles;
     display: flex;
     align-items: center;
     width: 100%;
     background: white;
     cursor: pointer;
+
     &:after {
       content: "";
       justify-self: end;
@@ -47,10 +51,49 @@
     }
   }
 }
-%projectTitleStyles{
+
+%inputContainer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: inherit;
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+%checkmarkGeneral {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: $col-white;
+}
+
+%buttonStyle {
+  background: $col-orange;
+  border-radius: 6px;
+  padding: 16px 56px;
+  border: none;
+  color: $col-white;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+%projectTitleStyles {
   text-align: center;
   margin: 50px auto;
 }
+
 %flexColumn {
   display: flex;
   flex-direction: column;
@@ -60,6 +103,12 @@
 .dark {
   background: $col-dark-blue;
   color: $col-white;
+  button {
+    @extend %buttonStyle;
+    background: $col-white;
+    box-shadow: 0px 3px 9px rgba($col-brown, 0.08);
+    color: $col-brown;
+  }
 }
 
 .light {
@@ -76,24 +125,105 @@
   font-size: 14px;
   line-height: 24px;
 }
+
 .fieldDark {
   *, *::before, *::after {
     box-sizing: border-box;
   }
+
   display: flex;
   flex-direction: column;
+
   label {
     margin-bottom: 16px;
   }
+
   input {
     @extend %resetInputStyles;
     @extend %inputStyles;
   }
+
   @extend %selectStylesWrapped;
 }
+
 .fieldLight {
   @extend .fieldDark;
+
   input, select {
     border: 1px solid $col-beige-border;
+  }
+}
+
+.inputCheckbox {
+  @extend %inputContainer;
+  input {
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    &:checked ~ .checkmark {
+      background-color: $col-orange;
+      &:after {
+        display: block;
+      }
+    }
+  }
+  .checkmark {
+    @extend %checkmarkGeneral;
+    border: 1px solid $col-white-grey;
+    border-radius: 3px;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 4px;
+      top: 0;
+      width: 5px;
+      height: 10px;
+      border: solid $col-white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  &:hover input ~ .checkmark {
+    background-color: $col-dark-blue;
+  }
+}
+
+.inputRadio {
+  @extend %inputContainer;
+  input {
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked ~ .checkmark {
+      background-color: $col-orange;
+      &:after {
+        display: block;
+      }
+    }
+  }
+  .checkmark {
+    @extend %checkmarkGeneral;
+    border-radius: 50%;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 5px;
+      left: 5px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $col-white;
+    }
+  }
+  &:hover input ~ .checkmark {
+    background-color: $col-dark-blue;
   }
 }

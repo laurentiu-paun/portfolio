@@ -66,11 +66,17 @@
         display: none;
       }
     }
+    @include onMobile {
+      text-align: center;
+      button {
+        align-self: center;
+      }
+    }
   }
 }
 
 #site-content {
-  .row {
+  .details {
     align-items: center;
     justify-content: center;
     #aboutWeb {

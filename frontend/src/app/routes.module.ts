@@ -6,9 +6,10 @@ import {CvComponent} from "./pages/cv/cv.component";
 import {WorkComponent} from "./pages/work/work.component";
 import {ResponsiveTableComponent} from "./pages/projects/responsive-table/responsive-table.component";
 import {ColorPaletteComponent} from "./pages/projects/color-palette/color-palette.component"
-import {NgModule} from "@angular/core";
 import {CarsStatusComponent} from "./pages/projects/cars-status/cars-status.component";
 import {JobApplicationComponent} from "./pages/projects/job-application/job-application.component";
+import {PortfolioElementsComponent} from "./pages/projects/portfolio-elements/portfolio-elements.component";
+import {NgModule} from "@angular/core";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, title: "Frontend - Home"},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'ColorPalette', component: ColorPaletteComponent, title: "Proiectele mele - Paleta de culori"},
   {path: 'CarsStatus', component: CarsStatusComponent, title: "Proiectele mele - Status masini"},
   {path: 'JobApplication', component: JobApplicationComponent, title: "Proiectele mele - Oferta de angajare"},
+  {path: 'PortfolioElements', component: PortfolioElementsComponent, title: "Proiectele mele - Elemente portofoliu"},
   { path: '**', redirectTo: 'home' ,title: "Frontend"}
 ]
 
@@ -31,4 +33,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
-export const routingComponents = [HomeComponent, AboutComponent, ContactComponent, CvComponent, WorkComponent, ResponsiveTableComponent, ColorPaletteComponent, CarsStatusComponent, JobApplicationComponent]
+export const routingComponents = [HomeComponent, AboutComponent, ContactComponent, CvComponent, WorkComponent, ResponsiveTableComponent, ColorPaletteComponent, CarsStatusComponent, JobApplicationComponent, PortfolioElementsComponent]
