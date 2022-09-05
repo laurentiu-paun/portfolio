@@ -66,9 +66,8 @@ label {
   align-self: center;
 }
 
-button {
+button, input[type=button] {
   @extend %buttonStyle;
-
 }
 
 img {

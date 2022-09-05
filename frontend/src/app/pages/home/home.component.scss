@@ -27,18 +27,6 @@
       display: block;
     }
 
-    button {
-      background: $col-orange;
-      padding: 16px 32px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      color: $col-white;
-      font-weight: 900;
-      text-transform: uppercase;
-      width: fit-content;
-    }
-
     .pictureDesign {
       position: relative;
       img {
@@ -70,6 +58,7 @@
       text-align: center;
       button {
         align-self: center;
+        background: $col-orange;
       }
     }
   }

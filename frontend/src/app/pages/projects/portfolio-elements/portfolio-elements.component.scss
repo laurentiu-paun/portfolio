@@ -13,7 +13,7 @@ h3 {
     &.dark {
       border-radius: 10px;
     }
-    button {
+    button, input[type=button] {
       margin: 20px;
     }
   }

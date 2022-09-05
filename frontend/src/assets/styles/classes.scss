@@ -87,13 +87,16 @@
 %buttonStyle {
   background: $col-orange;
   border-radius: 6px;
-  padding: 16px 56px;
+  height: 48px;
+  padding: 0 56px;
   border: none;
   color: $col-white;
   font-weight: 900;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  cursor: pointer;
+  width: fit-content;
 }
 
 %projectTitleStyles {
@@ -107,20 +110,38 @@
 }
 
 //classes to use
-.dark {
-  background: $col-dark-blue;
-  color: $col-white;
-  button {
-    @extend %buttonStyle;
-    background: $col-white;
-    box-shadow: 0px 3px 9px rgba($col-brown, 0.08);
-    color: $col-brown;
-  }
-}
-
 .light {
   background: $col-light-beige;
   color: $col-brown;
+  button, input[type=button] {
+    border: 1px solid transparent;
+    &:hover {
+      background: $col-white;
+      border: 1px solid $col-white;
+      box-shadow: 0px 3px 9px rgba($col-brown, 0.08);
+      color: $col-brown;
+    }
+    &:active {
+      border: 1px solid $col-orange;
+    }
+  }
+}
+
+.dark {
+  background: $col-dark-blue;
+  color: $col-white;
+  button, input[type=button] {
+    background: $col-purple;
+    border: 1px solid transparent;
+    &:hover {
+      background: transparent;
+      border: 1px solid rgba($col-white, 0.295743);
+      color: $col-white;
+    }
+    &:active {
+      border: 1px solid $col-purple;
+    }
+  }
 }
 
 .textBig {

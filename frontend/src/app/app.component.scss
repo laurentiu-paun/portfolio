@@ -35,6 +35,7 @@
       flex: 1;
       @include onMobile {
         flex-direction: column;
+        gap: 0;
       }
 
       li {
@@ -49,7 +50,7 @@
         }
 
         @include onMobile {
-          margin-bottom: 12px;
+          //margin-bottom: 12px;
           text-align: center;
         }
       }
@@ -68,6 +69,9 @@
       &:hover {
         background: $col-light-beige;
         color: $col-brown;
+      }
+      &:active {
+        border: 1px solid $col-purple;
       }
     }
   }
