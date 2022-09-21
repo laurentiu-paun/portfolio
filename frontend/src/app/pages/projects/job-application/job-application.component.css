@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
+.fieldDark input, .fieldLight input, .fieldDark .selectWrap select, .fieldLight .selectWrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+.fieldDark input, .fieldLight input, .fieldDark .selectWrap .select, .fieldLight .selectWrap .select {
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+.fieldDark .selectWrap, .fieldLight .selectWrap {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+}
+.fieldDark .selectWrap select, .fieldLight .selectWrap select {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 6px;
+  z-index: 1;
+  outline: none;
+}
+.fieldDark .selectWrap .select, .fieldLight .selectWrap .select {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background: white;
+}
+.fieldDark .selectWrap .select:after, .fieldLight .selectWrap .select:after {
+  content: "";
+  width: 10px;
+  height: 6px;
+  margin-right: 16px;
+  background-color: #EF6D58;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.inputRadio, .inputCheckbox {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: inherit;
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.inputRadio .checkmark, .inputCheckbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #FFFFFF;
+}
+
+.wrap .footer .action, .wrap .details .column, .wrap .header .rate {
+  display: flex;
+  flex-direction: column;
+}
+
+.light {
+  background: #FDF0E9;
+  color: #391400;
+}
+.light button, .light input[type=button] {
+  border: 1px solid transparent;
+}
+.light button:hover, .light input[type=button]:hover {
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
+  color: #391400;
+}
+.light button:active, .light input[type=button]:active {
+  border: 1px solid #EF6D58;
+}
+
+.dark {
+  background: #28293E;
+  color: #FFFFFF;
+}
+.dark button, .dark input[type=button] {
+  background: #B550F8;
+  border: 1px solid transparent;
+}
+.dark button:hover, .dark input[type=button]:hover {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.295743);
+  color: #FFFFFF;
+}
+.dark button:active, .dark input[type=button]:active {
+  border: 1px solid #B550F8;
+}
+
+.textBig {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.textSmall {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.fieldDark, .fieldLight {
+  display: flex;
+  flex-direction: column;
+}
+.fieldDark *, .fieldLight *, .fieldDark *::before, .fieldLight *::before, .fieldDark *::after, .fieldLight *::after {
+  box-sizing: border-box;
+}
+.fieldDark label, .fieldLight label {
+  margin-bottom: 16px;
+}
+.fieldLight input, .fieldLight .select {
+  border: 1px solid #F3D1BF;
+}
+
+.inputCheckbox input {
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.inputCheckbox input:checked ~ .checkmark {
+  background-color: #EF6D58;
+}
+.inputCheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.inputCheckbox .checkmark {
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+}
+.inputCheckbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 0;
+  width: 5px;
+  height: 10px;
+  border: solid #FFFFFF;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.inputCheckbox:hover input ~ .checkmark {
+  background-color: #28293E;
+}
+
+.inputRadio input {
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.inputRadio input:checked ~ .checkmark {
+  background-color: #EF6D58;
+}
+.inputRadio input:checked ~ .checkmark:after {
+  display: block;
+}
+.inputRadio .checkmark {
+  border-radius: 50%;
+}
+.inputRadio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+.inputRadio:hover input ~ .checkmark {
+  background-color: #28293E;
+}
+
+.projectTitle {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.wrap .footer span, .wrap .details .column span, .wrap .header .rate strong {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.row {
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 6px;
+}
+
+button {
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  padding: 0 16px;
+  cursor: pointer;
+}
+button:hover {
+  border-radius: 8px;
+}
+
+.purple {
+  background: #786DCF;
+  color: #FFFFFF;
+  border: 1px solid #786DCF;
+  letter-spacing: 0.233333px;
+}
+
+.bigButton {
+  border-radius: 6px;
+  width: 124px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.wrap {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #202024;
+  width: 800px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.wrap h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: #786DCF;
+}
+.wrap h4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+.wrap .header {
+  margin: 6px 24px;
+  display: flex;
+  align-items: center;
+}
+.wrap .header .photo {
+  height: 60px;
+  position: relative;
+  margin-right: 16px;
+}
+.wrap .header .photo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+}
+.wrap .header .photo:before {
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #0CFF07;
+  border: 1px solid #FFFFFF;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+.wrap .header .photo:after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #FF0000;
+  border: 1px solid #FFFFFF;
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+}
+.wrap .header .person {
+  flex: 1 1 auto;
+}
+.wrap .header .person h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #0065FF;
+}
+.wrap .header .person span:last-child {
+  margin-left: 12px;
+}
+.wrap .header .rate {
+  text-align: right;
+}
+.wrap .description {
+  padding: 17px 24px;
+  display: flex;
+  align-items: center;
+  background: #E2E2E2;
+}
+.wrap .description span {
+  margin-right: 24px;
+}
+.wrap .details {
+  display: flex;
+  border-bottom: 1px solid #E2E2E2;
+}
+.wrap .details .column {
+  flex: 1 1 0;
+  padding: 14px 24px;
+  border-right: 1px solid #E2E2E2;
+}
+.wrap .details .column:last-child {
+  border-right: none;
+}
+.wrap .details .column h4 {
+  margin-bottom: 6px;
+}
+.wrap .details .column .detailRow {
+  display: flex;
+}
+.wrap .details .column .detailRow span:first-child {
+  flex: 1 1 auto;
+}
+.wrap .details .column h2 {
+  line-height: 40px;
+  padding: 2px 0 6px;
+}
+.wrap .details .column strong {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0065FF;
+}
+.wrap .title {
+  padding: 16px 24px;
+}
+.wrap .footer {
+  padding: 16px 24px;
+  background: #E2E2E2;
+  border-radius: 0px 0px 8px 8px;
+  display: flex;
+}
+.wrap .footer img {
+  height: 80px;
+  border-radius: 6px;
+  margin-right: 24px;
+}
+.wrap .footer .company {
+  flex: 1;
+}
+.wrap .footer .action {
+  align-items: end;
+}
+.wrap .footer .action span {
+  margin-bottom: 12px;
+}
+.wrap .footer .action span strong {
+  font-weight: 600;
+  color: #DF3859;
+}
+
+/*# sourceMappingURL=job-application.component.css.map */

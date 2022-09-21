@@ -8,6 +8,7 @@ import {ResponsiveTableComponent} from "./pages/projects/responsive-table/respon
 import {ColorPaletteComponent} from "./pages/projects/color-palette/color-palette.component"
 import {CarsStatusComponent} from "./pages/projects/cars-status/cars-status.component";
 import {JobApplicationComponent} from "./pages/projects/job-application/job-application.component";
+import {WeatherForecastComponent} from "./pages/projects/weather-forecast/weather-forecast.component";
 import {PortfolioElementsComponent} from "./pages/projects/portfolio-elements/portfolio-elements.component";
 import {NgModule} from "@angular/core";
 
@@ -17,11 +18,12 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent, title: "Frontend - Contact"},
   {path: 'cv', component: CvComponent, title: "Frontend - CV"},
   {path: 'work', component: WorkComponent, title: "Frontend - Proiectele mele"},
-  {path: 'ResponsiveTable', component: ResponsiveTableComponent, title: "Proiectele mele - Tabel Responsive"},
-  {path: 'ColorPalette', component: ColorPaletteComponent, title: "Proiectele mele - Paleta de culori"},
-  {path: 'CarsStatus', component: CarsStatusComponent, title: "Proiectele mele - Status masini"},
-  {path: 'JobApplication', component: JobApplicationComponent, title: "Proiectele mele - Oferta de angajare"},
-  {path: 'PortfolioElements', component: PortfolioElementsComponent, title: "Proiectele mele - Elemente portofoliu"},
+  {path: 'responsiveTable', component: ResponsiveTableComponent, title: "Proiectele mele - Tabel Responsive"},
+  {path: 'colorPalette', component: ColorPaletteComponent, title: "Proiectele mele - Paleta de culori"},
+  {path: 'carsStatus', component: CarsStatusComponent, title: "Proiectele mele - Status masini"},
+  {path: 'jobApplication', component: JobApplicationComponent, title: "Proiectele mele - Oferta de angajare"},
+  {path: 'weatherForecast', component: WeatherForecastComponent, title: "Proiectele mele - Prognoza meteo"},
+  {path: 'portfolioElements', component: PortfolioElementsComponent, title: "Proiectele mele - Elemente portofoliu"},
   { path: '**', redirectTo: 'home' ,title: "Frontend"}
 ]
 
@@ -33,4 +35,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
-export const routingComponents = [HomeComponent, AboutComponent, ContactComponent, CvComponent, WorkComponent, ResponsiveTableComponent, ColorPaletteComponent, CarsStatusComponent, JobApplicationComponent, PortfolioElementsComponent]
+export const routingComponents = [HomeComponent, AboutComponent, ContactComponent, CvComponent, WorkComponent, ResponsiveTableComponent, ColorPaletteComponent, CarsStatusComponent, JobApplicationComponent, WeatherForecastComponent, PortfolioElementsComponent]

@@ -16,10 +16,6 @@ $col-purple: #786DCF;
   line-height: 24px;
 }
 
-.projectTitle {
-  @extend %projectTitleStyles;
-}
-
 .row {
   justify-content: center;
 }

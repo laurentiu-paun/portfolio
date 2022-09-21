@@ -99,11 +99,6 @@
   width: fit-content;
 }
 
-%projectTitleStyles {
-  text-align: center;
-  margin: 50px auto;
-}
-
 %flexColumn {
   display: flex;
   flex-direction: column;
@@ -254,4 +249,9 @@
   &:hover input ~ .checkmark {
     background-color: $col-dark-blue;
   }
+}
+
+.projectTitle {
+  text-align: center;
+  margin: 50px auto;
 }

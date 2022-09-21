@@ -1,0 +1,332 @@
+.fieldDark input, .fieldLight input, .fieldDark .selectWrap select, .fieldLight .selectWrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+.fieldDark input, .fieldLight input, .fieldDark .selectWrap .select, .fieldLight .selectWrap .select {
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+.fieldDark .selectWrap, .fieldLight .selectWrap {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+}
+.fieldDark .selectWrap select, .fieldLight .selectWrap select {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 6px;
+  z-index: 1;
+  outline: none;
+}
+.fieldDark .selectWrap .select, .fieldLight .selectWrap .select {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background: white;
+}
+.fieldDark .selectWrap .select:after, .fieldLight .selectWrap .select:after {
+  content: "";
+  width: 10px;
+  height: 6px;
+  margin-right: 16px;
+  background-color: #EF6D58;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.inputRadio, .inputCheckbox {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: inherit;
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.inputRadio .checkmark, .inputCheckbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #FFFFFF;
+}
+
+.info .experience, .info .details, .info .contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.light {
+  background: #FDF0E9;
+  color: #391400;
+}
+.light button, .light input[type=button] {
+  border: 1px solid transparent;
+}
+.light button:hover, .light input[type=button]:hover {
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
+  color: #391400;
+}
+.light button:active, .light input[type=button]:active {
+  border: 1px solid #EF6D58;
+}
+
+.dark {
+  background: #28293E;
+  color: #FFFFFF;
+}
+.dark button, .dark input[type=button] {
+  background: #B550F8;
+  border: 1px solid transparent;
+}
+.dark button:hover, .dark input[type=button]:hover {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.295743);
+  color: #FFFFFF;
+}
+.dark button:active, .dark input[type=button]:active {
+  border: 1px solid #B550F8;
+}
+
+.textBig {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.textSmall {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.fieldDark, .fieldLight {
+  display: flex;
+  flex-direction: column;
+}
+.fieldDark *, .fieldLight *, .fieldDark *::before, .fieldLight *::before, .fieldDark *::after, .fieldLight *::after {
+  box-sizing: border-box;
+}
+.fieldDark label, .fieldLight label {
+  margin-bottom: 16px;
+}
+.fieldLight input, .fieldLight .select {
+  border: 1px solid #F3D1BF;
+}
+
+.inputCheckbox input {
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.inputCheckbox input:checked ~ .checkmark {
+  background-color: #EF6D58;
+}
+.inputCheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.inputCheckbox .checkmark {
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+}
+.inputCheckbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 0;
+  width: 5px;
+  height: 10px;
+  border: solid #FFFFFF;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.inputCheckbox:hover input ~ .checkmark {
+  background-color: #28293E;
+}
+
+.inputRadio input {
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.inputRadio input:checked ~ .checkmark {
+  background-color: #EF6D58;
+}
+.inputRadio input:checked ~ .checkmark:after {
+  display: block;
+}
+.inputRadio .checkmark {
+  border-radius: 50%;
+}
+.inputRadio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+.inputRadio:hover input ~ .checkmark {
+  background-color: #28293E;
+}
+
+.projectTitle {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.container {
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 20px 20px 50px #28293E;
+  padding-bottom: 50px;
+}
+
+.row * {
+  box-sizing: border-box;
+}
+
+.header {
+  margin: 50px 0 100px;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  position: relative;
+}
+.header .title > h2 {
+  margin-bottom: 8px;
+}
+.header img {
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  right: 100px;
+  bottom: -35px;
+}
+@media (max-width: 576px) {
+  .header img {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    margin-bottom: 50px;
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+
+.info {
+  box-sizing: border-box;
+  padding: 0 100px;
+}
+.info h2, .info h3, .info h4 {
+  padding-bottom: 20px;
+}
+.info .h5small {
+  letter-spacing: 6px;
+}
+.info .contact {
+  gap: 10px;
+}
+.info ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+.info .details {
+  margin-bottom: 30px;
+}
+.info .experience {
+  margin-top: 40px;
+  gap: 20px;
+}
+.info .experience h3 {
+  padding: 0;
+}
+.info .experience .company-details {
+  margin-top: 15px;
+}
+@media (max-width: 576px) {
+  .info {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+  .info .contact {
+    text-align: center;
+  }
+  .info .border-bottom, .info .right-side {
+    border: none;
+  }
+  .info h2, .info h3, .info h4, .info h5 {
+    text-align: center;
+  }
+  .info * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+h2, h3, h4, h5 {
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin-bottom: 10px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #28293E;
+}
+
+.left-side {
+  padding: 20px 0;
+}
+
+.right-side {
+  border-left: 1px solid #28293E;
+  padding: 20px 0 20px 20px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=cv.component.css.map */

@@ -12,10 +12,6 @@ $color-palette: (
   "6": "#607D8B"
 );
 
-h3 {
-  @extend %projectTitleStyles;
-}
-
 .colors {
   font-family: 'IBM Plex Sans', sans-serif;
   margin: 100px 0;

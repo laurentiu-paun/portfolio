@@ -1,0 +1,282 @@
+.fieldDark input, .fieldLight input, .fieldDark .selectWrap select, .fieldLight .selectWrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+.fieldDark input, .fieldLight input, .fieldDark .selectWrap .select, .fieldLight .selectWrap .select {
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+.fieldDark .selectWrap, .fieldLight .selectWrap {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+}
+.fieldDark .selectWrap select, .fieldLight .selectWrap select {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 6px;
+  z-index: 1;
+  outline: none;
+}
+.fieldDark .selectWrap .select, .fieldLight .selectWrap .select {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background: white;
+}
+.fieldDark .selectWrap .select:after, .fieldLight .selectWrap .select:after {
+  content: "";
+  width: 10px;
+  height: 6px;
+  margin-right: 16px;
+  background-color: #EF6D58;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.inputRadio, .inputCheckbox {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: inherit;
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.inputRadio .checkmark, .inputCheckbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #FFFFFF;
+}
+
+#site-content .details #aboutWeb {
+  display: flex;
+  flex-direction: column;
+}
+
+.light {
+  background: #FDF0E9;
+  color: #391400;
+}
+.light button, .light input[type=button] {
+  border: 1px solid transparent;
+}
+.light button:hover, .light input[type=button]:hover {
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
+  color: #391400;
+}
+.light button:active, .light input[type=button]:active {
+  border: 1px solid #EF6D58;
+}
+
+.dark {
+  background: #28293E;
+  color: #FFFFFF;
+}
+.dark button, .dark input[type=button] {
+  background: #B550F8;
+  border: 1px solid transparent;
+}
+.dark button:hover, .dark input[type=button]:hover {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.295743);
+  color: #FFFFFF;
+}
+.dark button:active, .dark input[type=button]:active {
+  border: 1px solid #B550F8;
+}
+
+.textBig {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.textSmall {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.fieldDark, .fieldLight {
+  display: flex;
+  flex-direction: column;
+}
+.fieldDark *, .fieldLight *, .fieldDark *::before, .fieldLight *::before, .fieldDark *::after, .fieldLight *::after {
+  box-sizing: border-box;
+}
+.fieldDark label, .fieldLight label {
+  margin-bottom: 16px;
+}
+.fieldLight input, .fieldLight .select {
+  border: 1px solid #F3D1BF;
+}
+
+.inputCheckbox input {
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.inputCheckbox input:checked ~ .checkmark {
+  background-color: #EF6D58;
+}
+.inputCheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.inputCheckbox .checkmark {
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+}
+.inputCheckbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 0;
+  width: 5px;
+  height: 10px;
+  border: solid #FFFFFF;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.inputCheckbox:hover input ~ .checkmark {
+  background-color: #28293E;
+}
+
+.inputRadio input {
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.inputRadio input:checked ~ .checkmark {
+  background-color: #EF6D58;
+}
+.inputRadio input:checked ~ .checkmark:after {
+  display: block;
+}
+.inputRadio .checkmark {
+  border-radius: 50%;
+}
+.inputRadio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+.inputRadio:hover input ~ .checkmark {
+  background-color: #28293E;
+}
+
+.projectTitle {
+  text-align: center;
+  margin: 50px auto;
+}
+
+#hero {
+  padding: 120px 0;
+}
+#hero .container {
+  align-items: center;
+}
+#hero .container > div > div {
+  display: flex;
+  flex-direction: column;
+}
+#hero .container h5 {
+  margin-bottom: 24px;
+  color: #EF6D58;
+}
+#hero .container h1 {
+  margin-bottom: 24px;
+}
+#hero .container span {
+  opacity: 0.64;
+  margin-bottom: 32px;
+  display: block;
+}
+#hero .container .pictureDesign {
+  position: relative;
+}
+#hero .container .pictureDesign img {
+  max-height: 400px;
+  width: auto;
+}
+#hero .container .pictureDesign:before {
+  content: url("../../../assets/images/elements/star.png");
+  z-index: 2;
+  position: absolute;
+  right: 70px;
+  top: -80px;
+}
+#hero .container .pictureDesign:after {
+  content: url("../../../assets/images/elements/graph.png");
+  z-index: 1;
+  position: absolute;
+  right: 40px;
+  bottom: -40px;
+}
+@media (max-width: 576px) {
+  #hero .container .pictureDesign {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  #hero .container {
+    text-align: center;
+  }
+  #hero .container button {
+    align-self: center;
+    background: #EF6D58;
+  }
+}
+
+#site-content .details {
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  #site-content .details {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=home.component.css.map */

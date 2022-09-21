@@ -1,9 +1,5 @@
 @import "../../../../assets/styles/classes";
 
-h3 {
-  @extend %projectTitleStyles
-}
-
 .elements {
   gap: 20px;
   justify-content: center;
